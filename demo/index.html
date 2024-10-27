@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" />
+    <title>Document</title>
+  </head>
+  <body style="display: flex; justify-content: center">
+    <form action="" style="width: 500px">
+      <label for="selectInput">States</label>
+      <select name="" value="" id="selectInput">
+        <option value="">Select...</option>
+      </select>
+    </form>
+    <script>
+      "use strict";
+      const states = [
+        "Alabama",
+        "Alaska",
+        "Arizona",
+        "Arkansas",
+        "California",
+        "Colorado",
+        "Connecticut",
+        "Delaware",
+        "Florida",
+        "Georgia",
+        "Hawaii",
+        "Idaho",
+        "Illinois",
+        "Indiana",
+        "Iowa",
+        "Kansas",
+        "Kentucky",
+        "Louisiana",
+        "Maine",
+        "Maryland",
+        "Massachusetts",
+        "Michigan",
+        "Minnesota",
+        "Mississippi",
+        "Missouri",
+        "Montana",
+        "Nebraska",
+        "Nevada",
+        "New Hampshire",
+        "New Jersey",
+        "New Mexico",
+        "New York",
+        "North Carolina",
+        "North Dakota",
+        "Ohio",
+        "Oklahoma",
+        "Oregon",
+        "Pennsylvania",
+        "Rhode Island",
+        "South Carolina",
+        "South Dakota",
+        "Tennessee",
+        "Texas",
+        "Utah",
+        "Vermont",
+        "Virginia",
+        "Washington",
+        "West Virginia",
+        "Wisconsin",
+        "Wyoming",
+      ];
+      const stateSelector = document.querySelector("#selectInput");
+
+      for (let state of states) {
+        // let option = document.createElement("option");
+        // option.value = states
+        // option.innerText = state;
+
+        //option obj takes text then value 
+        let option = new Option(state, states,)
+        stateSelector.appendChild(option);
+      }
+
+    </script>
+  </body>
+</html>
