@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>Activities</title>
+  </head>
+  <body class="d-flex justify-content-center">
+    <div class="w-50">
+      <header class="container mt-4 mb-4">
+        <nav class="nav justify-content-center">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/activities.html">Activities</a>
+          <a class="nav-link" href="/hiking.html">Hiking</a>
+        </nav>
+      </header>
+
+      <main class="container">
+        <h4>Explore Activities</h4>
+        <div>
+          <label for="category">Activity Type</label>
+          <select class="d-block mt-2 form-select" name="" id="category" onchange="getCategory()">
+            <option value="">Select Option...</option>
+          </select>
+        </div>
+
+        <div class="mt-4">
+          <label for="activity">Activity Name</label>
+          <select class="d-block mt-2 form-select" name="" id="activity" onchange="getActivity()">
+            <option value="">Select Option...</option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary mt-4 mb-4" onclick="displayActivity()">Show Details</button>
+        <!-- details -->
+        <div id="details" class="d-none">
+          <p class="detailTxt">Category</p>
+          <p class="detailTxt">ID</p>
+          <p class="detailTxt">Name</p>
+          <p class="detailTxt">Location</p>
+          <p class="detailTxt">Description</p>
+          <p class="detailTxt">Price</p>
+        </div>
+
+        <form class="d-none form">
+          <h4>Checkout</h4>
+          <div class="mb-3">
+            <label for="tickets" class="form-label">Number</label>
+            <input type="number" class="form-control" id="tickets" value="" oninput="showTotal()" />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" required />
+          </div>
+          <div class="mb-3">
+            <label for="creditInfo" class="form-label">Credit Card Number</label>
+            <input type="text" class="form-control" id="creditInfo" placeholder="000-000-0000" min="12" max="12" />
+          </div>
+          <div class="mb-3">
+            <label for="total" class="form-label">Total</label>
+            <input type="text" class="form-control" id="total" style="width: 100px;" placeholder="" readonly/>
+          </div>
+          <div class="mb-3">
+            <button type="button" class="btn btn-primary" onclick="pay()">Submit</button>
+            <button type="button" class="btn btn-secondary px-3" id="resetBtn" onclick="resetActivity()">Reset</button>
+          </div>
+          <div id="paymentInfo"></div>
+        </form>
+      </main>
+
+      <footer></footer>
+    </div>
+    <script src="/scripts/activities.js"></script>
+  </body>
+</html>
